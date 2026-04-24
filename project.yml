@@ -1,0 +1,72 @@
+name: MacFixApp
+options:
+  bundleIdPrefix: com.macfixapp
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_HARDENED_RUNTIME: YES
+
+targets:
+  MacFixApp:
+    type: application
+    platform: macOS
+    sources:
+      - path: MacFixApp
+        excludes:
+          - "Info.plist"
+          - "MacFixApp.entitlements"
+    resources:
+      - MacFixApp/Assets.xcassets
+    info:
+      path: MacFixApp/Info.plist
+      properties:
+        CFBundleDisplayName: MacFixApp
+        LSMinimumSystemVersion: "13.0"
+        LSApplicationCategoryType: public.app-category.utilities
+        NSHumanReadableCopyright: ""
+    entitlements:
+      path: MacFixApp/MacFixApp.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-write: true
+        com.apple.security.files.downloads.read-write: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.macfixapp.MacFixApp
+        GENERATE_INFOPLIST_FILE: NO
+        COMBINE_HIDPI_IMAGES: YES
+        ENABLE_PREVIEWS: YES
+
+  MacFixAppTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - MacFixAppTests
+    dependencies:
+      - target: MacFixApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.macfixapp.MacFixAppTests
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  MacFixApp:
+    build:
+      targets:
+        MacFixApp: all
+        MacFixAppTests: [test]
+    test:
+      targets:
+        - MacFixAppTests
+    run:
+      config: Debug
+    archive:
+      config: Release

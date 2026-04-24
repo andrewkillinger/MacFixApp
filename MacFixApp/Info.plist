@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundleDisplayName</key>
+    <string>MacFixApp</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+    <key>CFBundleVersion</key>
+    <string>$(CURRENT_PROJECT_VERSION)</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+    <key>NSHumanReadableCopyright</key>
+    <string></string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>MacFixApp needs permission to read your Desktop so it can help tidy it up. Nothing is moved or deleted without your confirmation.</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>MacFixApp needs permission to look inside your Documents folder to help organize files. Nothing is moved or deleted without your confirmation.</string>
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>MacFixApp needs permission to look inside your Downloads folder to help organize files. Nothing is moved or deleted without your confirmation.</string>
+    <key>NSPicturesFolderUsageDescription</key>
+    <string>MacFixApp needs permission to look inside your Pictures folder to help find duplicate photos. Nothing is moved or deleted without your confirmation.</string>
+</dict>
+</plist>
